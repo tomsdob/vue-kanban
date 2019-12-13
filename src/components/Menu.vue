@@ -95,7 +95,7 @@
                 </ul>
             </div>
         </div>
-        <div @click="menuClosed = !menuClosed" class="bg-black w-screen h-screen opacity-25 fixed top-0 left-0 xl:hidden"></div>
+        <div @click="closeMenu" class="bg-black w-screen h-screen opacity-25 fixed top-0 left-0 xl:hidden"></div>
     </div>
 </template>
 s
