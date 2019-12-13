@@ -1,6 +1,6 @@
-📝 Kanban board made with TailwindCSS and VueJS.
+# 📝 Kanban board made with TailwindCSS and VueJS.
 
-# Installing the Kanban board:
+Installing the Kanban board:
 ```
 npm install
 ```
