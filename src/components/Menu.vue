@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-shrink-0 justify-center items-center fixed" id="Menu" :class="{ 'hidden' : isClosed }">
+    <div class="flex flex-shrink-0 justify-center items-center fixed" id="Menu" :class="{ 'hidden' : menuClosed }">
         <div class="flex flex-col top-0 left-0 bg-white w-64 h-screen p-4 shadow z-10">
             <button @click="closeMenu" class="ml-auto p-2 focus:outline-none xl:hidden">
                 <svg viewBox="0 0 20 20" class="flex w-5 h-5 text-gray-600">
