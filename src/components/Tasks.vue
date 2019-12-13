@@ -1,10 +1,10 @@
 <template>
   <div class="flex h-screen overflow-hidden">
-    <Menu />
+    <Menu class="xl:block xl:relative" id="Menu" />
     <div class="flex-1 flex flex-col">
       <!-- User navigation -->
       <div class="flex flex-row justify-between xl:justify-end items-center p-4 border-b bg-white">
-        <button class="focus:outline-none xl:hidden">
+        <button @click="openMenu" class="focus:outline-none xl:hidden">
             <svg viewBox="0 0 20 20" class="text-gray-600 w-6 h-6">
                 <path class="fill-current" d="M0 3H20V5H0V3ZM0 9H20V11H0V9ZM0 15H20V17H0V15Z" />
             </svg>
@@ -82,8 +82,15 @@ export default {
     InProgressTask,
     CompletedTask
   },
+  methods: {
+    openMenu(){
+      const menu = document.getElementById("Menu");
+      menu.classList.remove("hidden");
+    }
+  },
   data() {
     return {
+      menuOpen: false,
       toDoList: [
         {
           id: 0,

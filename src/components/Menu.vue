@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-shrink-0 justify-center items-center hidden xl:block xl:relative">
+    <div class="flex flex-shrink-0 justify-center items-center fixed" id="Menu" :class="{ 'hidden' : isClosed }">
         <div class="flex flex-col top-0 left-0 bg-white w-64 h-screen p-4 shadow z-10">
-            <button class="ml-auto p-2 focus:outline-none xl:hidden">
+            <button @click="closeMenu" class="ml-auto p-2 focus:outline-none xl:hidden">
                 <svg viewBox="0 0 20 20" class="flex w-5 h-5 text-gray-600">
                     <path class="fill-current" d="M9.99989 8.58602L2.92889 1.51501L1.51489 2.92901L8.58589 10L1.51489 17.071L2.92889 18.485L9.99989 11.414L17.0709 18.485L18.4849 17.071L11.4139 10L18.4849 2.92901L17.0709 1.51501L9.99989 8.58602Z"/>
                 </svg>
@@ -102,9 +102,16 @@ s
 <script>
 export default {
   name: "Menu",
+  methods: {
+    closeMenu(){
+      const menu = document.getElementById("Menu");
+      menu.classList.add("hidden");
+    }
+  },
   data() {  
     return {
         isClosed: true,
+        menuClosed: true,
     }
   }
 }
